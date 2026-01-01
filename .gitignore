@@ -1,0 +1,25 @@
+# ========================
+# FRONTEND (Nested)
+# ========================
+react-workspace/frontend/node_modules/
+react-workspace/frontend/dist/
+react-workspace/frontend/.env
+react-workspace/frontend/.DS_Store
+
+# ========================
+# BACKEND (Nested)
+# ========================
+sb-workspace/backend/target/
+sb-workspace/backend/**/*.class
+sb-workspace/backend/.mvn/
+sb-workspace/backend/mvnw
+sb-workspace/backend/mvnw.cmd
+sb-workspace/backend/.idea/
+sb-workspace/backend/*.iml
+sb-workspace/backend/.DS_Store
+
+# ========================
+# ECLIPSE WORKSPACE JUNK
+# ========================
+sb-workspace/.metadata/
+sb-workspace/RemoteSystemsTempFiles/

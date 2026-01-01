@@ -1,0 +1,120 @@
+/* 1. THE OVERLAY (Background Dimming) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    
+    /* CRITICAL FIX: Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    /* EXTRA POLISH: Blurs the background content slightly (Glass effect) */
+    backdrop-filter: blur(4px);
+}
+
+/* 2. THE MODAL CARD */
+.modal-content {
+    background-color: white;
+    width: 100%;
+    max-width: 450px; /* Slightly wider for better spacing */
+    border-radius: 12px; /* Smoother corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Keeps content inside the rounded corners */
+    padding: 0; /* Let the header/body handle padding */
+    
+    /* ANIMATION: Slide down from top */
+    animation: slideDown 0.3s ease-out;
+}
+
+/* 3. HEADER SECTION */
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Matches your theme */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* 4. BODY SECTION */
+.modal-body {
+    padding: 25px;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    color: #764ba2; /* Purple accent color */
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.info-value {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* 5. FOOTER / CLOSE BUTTON */
+.modal-footer {
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    text-align: right;
+}
+
+.btn-close-custom {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-close-custom:hover {
+    background-color: #bb2d3b;
+    transform: scale(1.05);
+}
+
+/* KEYFRAMES FOR ANIMATION */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
