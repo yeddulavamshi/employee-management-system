@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.backend.www.model.Employee;
 import com.backend.www.service.EmployeeService;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://employee-management-system-two-rho.vercel.app")
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api")
 public class EmployeeController {
 
 	@Autowired

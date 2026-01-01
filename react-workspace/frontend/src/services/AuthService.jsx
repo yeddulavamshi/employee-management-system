@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const AUTH_API = "http://localhost:8080/api/auth/login";
+const AUTH_API = "https://employee-management-system-orwg.onrender.com/api/auth/login";
 
 class AuthService {
 
