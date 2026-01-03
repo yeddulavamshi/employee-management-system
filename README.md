@@ -54,10 +54,67 @@ A robust, full-stack web application designed to streamline employee data manage
 
 ---
 
-## 🏗️ Architecture Flow
+## 📂 Project Structure
 
-```mermaid
-graph LR
-A[User (Browser)] -- HTTP Requests --> B[React Frontend (Vercel)]
-B -- REST API Calls --> C[Spring Boot Backend (Render)]
-C -- JDBC --> D[MySQL Database (Aiven)]
+This project is organized as a Monorepo, containing both the **Frontend** (React) and **Backend** (Spring Boot) applications.
+
+```bash
+Employee-Management-System/
+├── LICENSE
+├── README.md
+├── .gitignore
+├── screenshots/               # Project demo images
+│   ├── list-page.png
+│   └── add-page.png
+│
+├── react-workspace/           # Frontend Directory
+│   └── frontend/
+│       ├── public/
+│       ├── src/
+│       │   ├── components/    # Reusable React components
+│       │   ├── services/      # API service files (Axios)
+│       │   ├── App.jsx        # Main Component
+│       │   └── main.jsx       # Entry Point
+│       ├── package.json       # Frontend dependencies
+│       ├── vite.config.js     # Vite configuration
+│       └── vercel.json        # Vercel deployment config (Routing fix)
+│
+└── sb-workspace/              # Backend Directory
+    └── backend/
+        ├── src/
+        │   └── main/java/com/example/ems/
+        │       ├── controller/  # REST Controllers
+        │       ├── model/       # JPA Entities
+        │       ├── repository/  # Database Repositories
+        │       ├── service/     # Business Logic
+        │       └── exception/   # Custom Exception Handlers
+        ├── Dockerfile           # Docker configuration for Render
+        ├── pom.xml              # Maven dependencies
+        └── mvnw                 # Maven Wrapper
+
+```
+---
+
+## ⚙️ How It Works
+
+The application follows a modern **Client-Server Architecture** with a clear separation of concerns:
+
+1.  **Frontend Interaction (React & Axios)**
+    * The user interacts with the UI (e.g., clicking "Add Employee").
+    * React uses **Axios** to dispatch an asynchronous HTTP request (GET, POST, PUT, DELETE) to the Spring Boot Backend API.
+    * Example: Submitting the form sends a `POST` request with a JSON object containing the employee's details.
+
+2.  **Backend Processing (Spring Boot)**
+    * The **Controller Layer** (`EmployeeController`) receives the HTTP request.
+    * The request is passed to the **Service Layer** (`EmployeeService`), which handles business logic.
+    * The **Repository Layer** (`EmployeeRepository`) uses **Spring Data JPA** to communicate with the database.
+
+3.  **Data Persistence (MySQL)**
+    * Hibernate (inside Spring Boot) translates the Java objects into SQL queries.
+    * The data is securely stored or retrieved from the **Aiven Cloud MySQL Database**.
+
+4.  **Response Cycle**
+    * The backend returns a standard HTTP response (e.g., `200 OK` or `201 Created`) along with the data in **JSON format**.
+    * The React Frontend receives this response and dynamically updates the DOM to display the new data without reloading the page.
+
+---
