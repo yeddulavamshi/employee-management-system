@@ -20,11 +20,21 @@ A robust, full-stack web application designed to streamline employee data manage
 
 ---
 
+## 🔑 Demo Credentials
+To test the application features (Add/Edit/Delete Employees), please use the following demo account:
+
+* **Username / Email:** `admin`
+* **Password:** `admin123`
+
+> **Note:** You can also register a new user if you prefer!
+ 
+---
+
 ## 📸 Screenshots
 
 | **Employee List** | **Add Employee** |
 |:---:|:---:|
-| ![List Page](./screenshots/list-page.png) | ![Add Page](./screenshots/add-page.png) |
+| ![Login Page](Login.png) | ![List Page](Employee_List.png) | ![Add Page](Add_Employee.png) | ![Update Page](Update_Employee.png) | ![View Page](View_Employee.png) |
 
 ---
 
