@@ -34,15 +34,15 @@ To test the application features (Add/Edit/Delete Employees), please use the fol
 
 | **Login Page** | **Employee List** |
 |:---:|:---:|
-| ![Login Page](Login.png) | ![List Page](Employee_List.png) |
+| ![Login Page](./Screenshots/Login_page.png) | ![List Page](./Screenshots/Employee_List.png) |
 
-| **Add Employee** | **Update Employee** |
+| **Add Employee** | **View Details** |
 |:---:|:---:|
-| ![Add Page](Add_Employee.png) | ![Update Page](Update_Employee.png) |
+| ![Add Page](./Screenshots/Add_Employee.png) | ![View Page](./Screenshots/View_Employee.png) |
 
-| **View Details** |
-|:---:|
-| ![View Page](View_Employee.png) |
+| **Update Details** | **Delete Employee** |
+|:---:|:---:|
+| ![View Page](./Screenshots/Update_page.png) | ![Delete Page](./Screenshots/Delete_Employee.png) |
 
 ---
 
@@ -81,21 +81,25 @@ Employee-Management-System/
 ├── LICENSE
 ├── README.md
 ├── .gitignore
-├── screenshots/               # Project demo images
-│   ├── list-page.png
-│   └── add-page.png
+├── Screenshots/
+│   ├── Login_page.png
+│   ├── Employee_List.png
+│   ├── Add_Employee.png
+│   ├── View_Employee.png
+│   ├── Update_page.png
+│   └── Delete_Employee.png
 │
-├── react-workspace/           # Frontend Directory
+├── react-workspace/            # Frontend Directory
 │   └── frontend/
 │       ├── public/
 │       ├── src/
-│       │   ├── components/    # Reusable React components
-│       │   ├── services/      # API service files (Axios)
-│       │   ├── App.jsx        # Main Component
-│       │   └── main.jsx       # Entry Point
-│       ├── package.json       # Frontend dependencies
-│       ├── vite.config.js     # Vite configuration
-│       └── vercel.json        # Vercel deployment config (Routing fix)
+│       │   ├── components/     # Reusable React components
+│       │   ├── services/       # API service files (Axios)
+│       │   ├── App.jsx         # Main Component
+│       │   └── main.jsx        # Entry Point
+│       ├── package.json        # Frontend dependencies
+│       ├── vite.config.js      # Vite configuration
+│       └── vercel.json         # Vercel deployment config (Routing fix)
 │
 └── sb-workspace/              # Backend Directory
     └── backend/
