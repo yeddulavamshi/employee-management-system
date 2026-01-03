@@ -32,9 +32,17 @@ To test the application features (Add/Edit/Delete Employees), please use the fol
 
 ## 📸 Screenshots
 
-| **Employee List** | **Add Employee** |
+| **Login Page** | **Employee List** |
 |:---:|:---:|
-| ![Login Page](Login.png) | ![List Page](Employee_List.png) | ![Add Page](Add_Employee.png) | ![Update Page](Update_Employee.png) | ![View Page](View_Employee.png) |
+| ![Login Page](Login.png) | ![List Page](Employee_List.png) |
+
+| **Add Employee** | **Update Employee** |
+|:---:|:---:|
+| ![Add Page](Add_Employee.png) | ![Update Page](Update_Employee.png) |
+
+| **View Details** |
+|:---:|
+| ![View Page](View_Employee.png) |
 
 ---
 
